@@ -8,6 +8,7 @@ function AddTodo() {
 
         const novosTodos = [...todos, {id: 1, tittle: texto, completed: false}]
         setTodos(novosTodos)
+        setTexto('')
     }
 
     const [texto, setTexto] = useState("")
