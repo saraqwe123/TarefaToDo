@@ -1,12 +1,13 @@
 import {useContext, useState} from 'react'
 import { TodoContext } from '../context/TodoContext'
+import { v4 as uuidv4 } from 'uuid'; 
 
 function AddTodo() {
     const addTodo = (e) => {
         e.preventDefault()
 
 
-        const novosTodos = [...todos, {id: 1, tittle: texto, completed: false}]
+        const novosTodos = [...todos, { id: uuidv4(), title: texto, completed: false }];
         setTodos(novosTodos)
         setTexto('')
     }
