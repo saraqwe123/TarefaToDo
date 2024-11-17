@@ -6,7 +6,6 @@ function AddTodo() {
     const addTodo = (e) => {
         e.preventDefault()
 
-
         const novosTodos = [...todos, { id: uuidv4(), title: texto, completed: false }];
         setTodos(novosTodos)
         setTexto('')
