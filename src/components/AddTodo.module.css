@@ -1,0 +1,44 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    margin-bottom: 20px; 
+}
+
+.imagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+   
+}
+
+.input {
+    background-color: #262626;
+    padding: 10px;
+    color: #ccc;
+    border-radius: 5px;
+    width: 400px; 
+    margin-bottom: 40px; 
+}
+
+.button {
+    margin-left: 20px;
+    padding: 10px 15px;
+    background-color: #2081a4; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contadores {
+    color: #41bfed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

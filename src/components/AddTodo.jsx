@@ -1,6 +1,7 @@
 import {useContext, useState} from 'react'
 import { TodoContext } from '../context/TodoContext'
 import { v4 as uuidv4 } from 'uuid'; 
+import styles from './AddTodo.module.css';
 
 function AddTodo() {
     const addTodo = (e) => {
@@ -13,11 +14,24 @@ function AddTodo() {
 
     const [texto, setTexto] = useState("")
     const [todos, setTodos] = useContext(TodoContext)
+
+    const tarefasCriadas = todos.length;
+    const tarefasConcluidas = todos.filter(todo => todo.completed).length;
+
     return(
-        <div>
+        <div className={styles.cntainer}>
+            <div className={styles.imagem}>
+            <img src="./Logo.svg" alt="" />
+            </div>
             <div>
-                <input value={texto} type="text" onChange={e => setTexto(e.target.value)} className="bg-sky-500" />
-                <button onClick={addTodo}>Criar</button>
+                <input className={styles.input}
+                 value={texto} type="text" onChange={e => setTexto(e.target.value)}/>
+                <button className={styles.button} 
+                onClick={addTodo}>Criar</button>
+            </div>
+            <div className={styles.contadores}>
+                <p>Tarefas Criadas {tarefasCriadas}</p>
+                <p>Tarefas Concluídas {tarefasConcluidas}</p>
             </div>
         </div>
     )

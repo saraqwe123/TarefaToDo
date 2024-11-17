@@ -1,0 +1,15 @@
+.container {
+    background-color: rgb(100, 95, 95);
+    margin-bottom: 150px;
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.um {
+    width: 500px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}

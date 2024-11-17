@@ -13,7 +13,7 @@ function TodoList() {
                     <Todo key={item.id} id={item.id} title={item.title} completed={item.completed} />
                 ))
             ) : (
-                <h4>Sem todos</h4>
+                <h4><img src="Empty.svg" alt=""/></h4>
             )}
         </>
     );
